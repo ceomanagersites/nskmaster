@@ -457,3 +457,5 @@ input[type="range"]::-moz-range-thumb { width: 24px; height: 24px; border-radius
   .bar-top__phone svg { display: block; }
   .bar-top__phone span { display: none; }
 }
+
+.nw { white-space: nowrap; }
