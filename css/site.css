@@ -76,17 +76,17 @@ svg { display: block; }
 /* ---------- Обложка ---------- */
 .hero { padding: 20px 0 0; }
 .hero__card {
-  position: relative; overflow: hidden; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); align-items: center;
+  position: relative; overflow: hidden; display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, .55fr); align-items: center;
   min-height: 560px; padding: 72px 64px; border-radius: var(--r-xl); color: #fff;
   background:
     radial-gradient(600px 380px at 85% 100%, rgba(244,178,62,.18), transparent 70%),
     linear-gradient(135deg, #1B2746 0%, var(--navy) 55%, #101830 100%);
 }
-.hero__plan { position: absolute; right: 48px; top: 50%; width: min(44%, 520px); height: auto; transform: translateY(-50%); fill: none; stroke: rgba(231,234,242,.22); stroke-width: 2.5; }
+.hero__plan { position: absolute; right: 40px; top: 50%; width: min(36%, 460px); height: auto; transform: translateY(-50%); fill: none; stroke: rgba(231,234,242,.22); stroke-width: 2.5; }
 .hero__plan .door { stroke: rgba(244,178,62,.55); stroke-dasharray: 4 5; }
 .hero__plan .dim { stroke: rgba(231,234,242,.14); stroke-width: 1.5; }
-.hero__text { position: relative; max-width: 640px; }
-.hero h1 { font-size: clamp(38px, 4.6vw, 60px); line-height: 1.06; font-weight: 800; letter-spacing: -.025em; }
+.hero__text { position: relative; max-width: 700px; }
+.hero h1 { font-size: clamp(36px, 4vw, 52px); line-height: 1.06; font-weight: 800; letter-spacing: -.025em; }
 .hero__lead { margin-top: 22px; font-size: 19px; color: var(--on-navy); max-width: 33em; }
 .hero__btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
 .hero__rating { position: absolute; right: 40px; bottom: 36px; display: flex; align-items: center; gap: 12px; padding: 12px 18px; border-radius: var(--r-md); background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12); text-decoration: none; backdrop-filter: blur(6px); }
@@ -125,6 +125,7 @@ svg { display: block; }
 /* ---------- Цифры ---------- */
 .nums { padding: 8px 0 24px; }
 .nums__row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+.nums__row--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; }
 .num { display: flex; flex-direction: column; gap: 10px; padding: 26px 0; border-top: 3px solid var(--navy); }
 .num b { font-size: clamp(40px, 4.4vw, 60px); font-weight: 800; line-height: 1; letter-spacing: -.03em; color: var(--navy); white-space: nowrap; }
 .num span { font-size: 15px; line-height: 1.45; color: var(--ink-2); max-width: 17em; }
@@ -210,7 +211,7 @@ svg { display: block; }
   .srv__item:nth-child(even) .srv__pic { order: 0; }
   .srv__pic { aspect-ratio: 16 / 7; }
   .srv__pic svg { width: 22%; }
-  .nums__row { grid-template-columns: 1fr 1fr; }
+  .nums__row, .nums__row--3 { grid-template-columns: 1fr 1fr; gap: 24px; }
   .lead, .night, .contacts { grid-template-columns: 1fr; gap: 32px; }
   .steps { grid-template-columns: 1fr 1fr; }
   .reviews { grid-template-columns: 1fr 1fr; }
