@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/site.css?v=4">
+  <link rel="stylesheet" href="css/site.css?v=5">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -91,9 +91,7 @@
         <ul class="perks">
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7z M14 3v5h5 M10 13h6 M10 17h6"/></svg>Смета до&nbsp;начала работ, без лишних позиций</li>
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v16H5z M9 9h6 M9 13h6 M9 17l2 1 4-3"/></svg>Работаем строго по&nbsp;договору</li>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>Ремонт ночью, без остановки работы</li>
-          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z M8 9h8 M8 12h5"/></svg>Отчёты и&nbsp;чеки в&nbsp;общем чате</li>
-        </ul>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>Ремонт ночью, без остановки работы</li>        </ul>
       </div>
     </section>
 
@@ -103,9 +101,10 @@
         <h2 class="sec__title" id="srvTitle">Какие объекты ремонтируем</h2>
         <div class="srv">
           <article class="srv__item">
-            <div class="srv__pic srv__pic--flat" aria-hidden="true">
-              <svg viewBox="0 0 120 120"><path d="M10 104V60l22-16v16l22-16v16l22-16v16l22-16v60z M86 44V16h12v28 M10 104h100 M26 104V86h16v18"/></svg>
-            </div>
+            <figure class="srv__pic">
+              <picture><source srcset="img/zavod.webp" type="image/webp"><img src="img/zavod.jpg" alt="Светлый производственный цех с оборудованием" width="1200" height="750" loading="lazy" decoding="async"></picture>
+              <figcaption>Фото для примера</figcaption>
+            </figure>
             <div class="srv__body">
               <h3>Заводы и&nbsp;производственные цеха</h3>
               <p>Ремонт и&nbsp;отделка цехов, производственных и&nbsp;административно-бытовых помещений на&nbsp;территории предприятия.</p>
@@ -113,9 +112,10 @@
             </div>
           </article>
           <article class="srv__item">
-            <div class="srv__pic srv__pic--office" aria-hidden="true">
-              <svg viewBox="0 0 120 120"><path d="M12 104V44l48-26 48 26v60 M12 104h96 M30 104V64h60v40 M30 77h60 M30 90h60"/></svg>
-            </div>
+            <figure class="srv__pic">
+              <picture><source srcset="img/sklad.webp" type="image/webp"><img src="img/sklad.jpg" alt="Проход между стеллажами на складе" width="1200" height="750" loading="lazy" decoding="async"></picture>
+              <figcaption>Фото для примера</figcaption>
+            </figure>
             <div class="srv__body">
               <h3>Склады</h3>
               <p>Отделка складских помещений, укладка плитки, замена электропроводки. Срочные работы закрываем в&nbsp;короткие сроки.</p>
@@ -123,21 +123,25 @@
             </div>
           </article>
           <article class="srv__item">
-            <div class="srv__pic srv__pic--bath" aria-hidden="true">
-              <svg viewBox="0 0 120 120"><path d="M18 104V24h52v80 M70 48h32v56 M14 104h92 M30 38h10M48 38h10M30 54h10M48 54h10M30 70h10M48 70h10M82 62h8M82 78h8"/></svg>
-            </div>
+            <figure class="srv__pic">
+              <picture><source srcset="img/tc-aura.webp" type="image/webp"><img src="img/tc-aura.jpg" alt="Торгово-развлекательный центр «Аура» в Новосибирске" width="1200" height="750" loading="lazy" decoding="async"></picture>
+              <figcaption>ТЦ «Аура», Новосибирск. Фото: <a href="https://commons.wikimedia.org/wiki/File:%D0%A2%D0%A0%D0%A6_%D0%90%D1%83%D1%80%D0%B0,_%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D0%B8%D0%B1%D0%B8%D1%80%D1%81%D0%BA_01.jpg" target="_blank" rel="noopener">К.Артём.1</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru" target="_blank" rel="noopener">CC BY-SA 4.0</a></figcaption>
+            </figure>
             <div class="srv__body">
-              <h3>Офисы и&nbsp;магазины</h3>
-              <p>Ремонт офисов, торговых и&nbsp;административных помещений. Приходим после закрытия, к&nbsp;утру убираем мусор, и&nbsp;вы открываетесь как обычно.</p>
+              <h3>Торговые центры</h3>
+              <p>Ремонт торговых площадей, магазинов и&nbsp;офисов в&nbsp;торговых центрах, в&nbsp;том числе в&nbsp;ТЦ «Аура».</p>
+              <p>Приходим после закрытия, к&nbsp;утру убираем мусор, и&nbsp;центр открывается как обычно.</p>
             </div>
           </article>
           <article class="srv__item">
-            <div class="srv__pic srv__pic--eng" aria-hidden="true">
-              <svg viewBox="0 0 120 120"><path d="M66 12 34 66h26l-8 42 34-58H60z"/></svg>
-            </div>
+            <figure class="srv__pic">
+              <picture><source srcset="img/ventfasad.webp" type="image/webp"><img src="img/ventfasad.jpg" alt="Оранжевый вентилируемый фасад с надписью «Сила Сибири» и гербом Новосибирска" width="1200" height="750" loading="lazy" decoding="async"></picture>
+              <figcaption>Наш объект: «Сила Сибири»</figcaption>
+            </figure>
             <div class="srv__body">
-              <h3>Инженерные системы и&nbsp;фасады</h3>
-              <p>Электромонтаж и&nbsp;замена проводки, отопление, водоснабжение и&nbsp;канализация. Фасадные работы на&nbsp;коммерческих зданиях.</p>
+              <h3>Вентфасады</h3>
+              <p>Монтаж вентилируемых фасадов на&nbsp;коммерческих и&nbsp;производственных зданиях.</p>
+              <p>Внутри зданий делаем электромонтаж, отопление, водоснабжение и&nbsp;канализацию.</p>
             </div>
           </article>
         </div>
@@ -272,8 +276,8 @@
               <li>Заводы и производственные цеха</li>
               <li>Склады</li>
               <li>Офисы и административные здания</li>
-              <li>Магазины и торговые помещения</li>
-              <li>Фасады зданий</li>
+              <li>Торговые центры и магазины</li>
+              <li>Вентилируемые фасады</li>
             </ul>
           </div>
         </div>
@@ -328,6 +332,6 @@
     </div>
   </footer>
 
-  <script src="js/site.js?v=4"></script>
+  <script src="js/site.js?v=5"></script>
 </body>
 </html>
