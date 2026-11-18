@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -13,10 +13,11 @@
   <meta property="og:title" content="Нскмастер — ремонт коммерческой недвижимости в Новосибирске">
   <meta property="og:description" content="Цеха, склады, офисы и магазины. Ремонтируем ночью, чтобы предприятие не останавливалось.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/site.css?v=8">
+  <script>document.documentElement.className = "js";</script>
+  <link rel="preload" href="fonts/inter-tight-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/inter-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/fonts.css?v=12">
+  <link rel="stylesheet" href="css/site.css?v=12">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -42,6 +43,16 @@
   <!-- Набор значков: линии 1.8, скругления, 24×24. Используются через <use href="#i-..."> -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <defs>
+      <!-- Фирменный знак: два сцепленных ромба образуют «М». Цвета задаются переменными --mk-l, --mk-r, толщина --mk-sw -->
+      <linearGradient id="mkGold" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#FFD98A"/>
+        <stop offset=".5" stop-color="#F4B23E"/>
+        <stop offset="1" stop-color="#D9921F"/>
+      </linearGradient>
+      <g id="nsk-mark">
+        <path d="M45.76 67.24 37 76 11 50 37 24 63 50 54.24 58.76" style="fill:none;stroke-width:var(--mk-sw,7.5px);stroke-linejoin:miter;stroke-miterlimit:4;stroke:var(--mk-l,#fff)"/>
+        <path d="M54.24 32.76 63 24 89 50 63 76 37 50 45.76 41.24" style="fill:none;stroke-width:var(--mk-sw,7.5px);stroke-linejoin:miter;stroke-miterlimit:4;stroke:var(--mk-r,#F4B23E)"/>
+      </g>
       <symbol id="i-calc" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M8.5 7h7M8.5 11h1M11.5 11h1M14.5 11h1M8.5 14h1M11.5 14h1M14.5 14v3M8.5 17h1M11.5 17h1"/></symbol>
       <symbol id="i-contract" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M8.5 12h7M8.5 15.5h3.5"/><path d="m13 18 1.5 1.2L17 16"/></symbol>
       <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/><path d="M16.5 3.5v2M15.5 4.5h2"/></symbol>
@@ -69,7 +80,7 @@
   <header class="head" id="top">
     <div class="wrap head__row">
       <a class="logo" href="#top" aria-label="Нскмастер, наверх">
-        <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11"/><path class="m1" d="M11 28V12.5l9 9.5"/><path class="m2" d="M20 22l9-9.5V28"/></svg>
+        <svg class="logo__mark" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="26"/><use href="#nsk-mark" transform="translate(50 50) scale(.84) translate(-50 -50)"/></svg>
         <span class="logo__text"><span class="logo__name"><b>Нск</b>мастер</span><small>ремонт коммерческих объектов</small></span>
       </a>
       <nav class="nav" id="nav" aria-label="Разделы">
@@ -97,17 +108,16 @@
             <source srcset="img/hero.webp" type="image/webp">
             <img src="img/hero.jpg" alt="" width="2000" height="1000" fetchpriority="high" decoding="async">
           </picture>
-          <svg class="hero__mark" viewBox="0 0 400 400" aria-hidden="true">
-            <rect x="70" y="70" width="260" height="260" rx="52" transform="rotate(45 200 200)"/>
-            <path class="m1" d="M140 268V136l60 64"/>
-            <path class="m2" d="M200 200l60-64v132"/>
+          <svg class="hero__mark" viewBox="4 14 92 72" aria-hidden="true">
+            <!-- Фирменный знак крупно, плоский и полупрозрачный, как водяной знак -->
+            <use href="#nsk-mark"/>
           </svg>
           <div class="hero__text">
             <p class="hero__tag"><svg aria-hidden="true"><use href="#i-pin"/></svg>Работаем в Новосибирске</p>
             <h1>Ремонт заводов, складов и&nbsp;коммерческих помещений в&nbsp;Новосибирске</h1>
             <p class="hero__lead">Производственные цеха, склады, офисы и&nbsp;магазины. Смета до&nbsp;начала работ, договор и&nbsp;сдача в&nbsp;срок. Работаем ночью, чтобы ваше предприятие не&nbsp;останавливалось.</p>
             <div class="hero__btns">
-              <a class="btn btn--accent" href="https://t.me/Kbeloz4" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-tg"/></svg>Получить консультацию</a>
+              <a class="btn btn--accent btn--shine" href="https://t.me/Kbeloz4" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-tg"/></svg>Получить консультацию</a>
               <a class="btn btn--ghost" href="tel:+79137930900"><svg aria-hidden="true"><use href="#i-phone"/></svg>Позвонить</a>
             </div>
           </div>
@@ -343,7 +353,7 @@
     <div class="wrap foot__grid">
       <div class="foot__brand">
         <a class="logo logo--foot" href="#top" aria-label="Нскмастер, наверх">
-          <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11"/><path class="m1" d="M11 28V12.5l9 9.5"/><path class="m2" d="M20 22l9-9.5V28"/></svg>
+          <svg class="logo__mark" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="26"/><use href="#nsk-mark" transform="translate(50 50) scale(.84) translate(-50 -50)"/></svg>
           <span class="logo__text"><span class="logo__name"><b>Нск</b>мастер</span><small>ремонт коммерческой недвижимости</small></span>
         </a>
         <p class="foot__about">Ремонт и&nbsp;отделка заводов, складов, торговых центров и&nbsp;офисов в&nbsp;Новосибирске. Работаем по&nbsp;договору, в&nbsp;том числе ночью.</p>
@@ -384,10 +394,11 @@
     </div>
     <div class="wrap foot__bottom">
       <span>© <span id="year">2026</span> Нскмастер. Все права защищены.</span>
+      <span class="foot__docs"><a href="politika.html">Политика конфиденциальности</a><a href="cookies.html">Политика использования cookie</a></span>
       <a href="#top">Наверх</a>
     </div>
   </footer>
 
-  <script src="js/site.js?v=8"></script>
+  <script src="js/site.js?v=12"></script>
 </body>
 </html>

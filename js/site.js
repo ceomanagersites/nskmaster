@@ -13,4 +13,15 @@
   matchMedia("(min-width: 1025px)").addEventListener("change", () => setMenu(false));
 
   document.getElementById("year").textContent = new Date().getFullYear();
+
+  /* Жёлтые черты у заголовков прорисовываются, когда заголовок появляется на экране */
+  const bars = document.querySelectorAll(".sec__title, .srv__body h3");
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("is-in"); io.unobserve(e.target); } });
+    }, { threshold: 0.6 });
+    bars.forEach((el) => io.observe(el));
+  } else {
+    bars.forEach((el) => el.classList.add("is-in"));
+  }
 })();
